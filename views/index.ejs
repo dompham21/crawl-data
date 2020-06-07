@@ -1,0 +1,16 @@
+<html>
+    <head></head>
+    <body>
+        <% html.each(function(i,e){ %>
+            <h1>Title</h1>
+            <h2> <%= $(e).find("a > .content > p.title").text() %> </h2>
+            <h1>Link image</h1>
+            <h2> <%= $(e).find("a > .content > span.image > img.product-image.img-responsive").attr('src') %> </h2>
+            <h1>Author</h1>
+            <h2> <%= $(e).find("a > .content > p.author").text() %> </h2>
+            <h1>Price sale</h1>
+            <h2> <%= $(e).find("a > .content > p.price-sale > .final-price").text() %> </h2>
+            <br>
+       <% }); %>
+    </body>
+</html>
